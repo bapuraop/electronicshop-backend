@@ -2,11 +2,9 @@ package com.electronicshop.electronicshop.services.impl;
 
 import com.electronicshop.electronicshop.dtos.UserDto;
 import com.electronicshop.electronicshop.repositories.UserRepositories;
-import com.electronicshop.electronicshop.repositories.userRepositories;
 import com.electronicshop.electronicshop.services.userServices;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,8 +19,15 @@ public class UserServicesImpl implements userServices {
     @Override
 
     public UserDto CtreteUser(UserDto userDto) {
-        User user = dtotoEntity(userDto);
-        userRepositories.save(user);
+
+       // User user = dtotoEntity(userDto);
+       // userRepositories.save(user);
+       User user = dtoToEntity(userDto);
+        UserRepositories.save(userDto);
+
+
+        UserDto saveuserDto = entityToDto(user);
+
 //        User saveuser= UserRepositories.save(user);
 //
 //        UserDto saveuserDto = entityToDto(saveuser);
@@ -30,6 +35,7 @@ public class UserServicesImpl implements userServices {
 //        return saveuserDto;
         return null;
     }
+
 
 //    private Object entityToDto(User saveuser) {
 //        return null;
@@ -66,6 +72,14 @@ public class UserServicesImpl implements userServices {
 
     @Override
     public List<UserDto> searchUser(String Keyword) {
+        return null;
+    }
+
+    private UserDto entityToDto(User user) {
+    }
+
+    private User dtoToEntity(UserDto userDto) {
+        User.
         return null;
     }
 }

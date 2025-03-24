@@ -11,7 +11,8 @@
 	<groupId>com.electronicshop</groupId>
 	<artifactId>electronicshop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+<!--	<packaging>war</packaging>-->
+	<packaging>jar</packaging>
 	<name>electronicshop</name>
 	<description>Spring Boot electronic shop project.</description>
 	<url/>
@@ -59,7 +60,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
+<!--			<scope>provided</scope>-->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
